@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +6,23 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tarjoiluOhje: {tyo: string, poydanNumero: string, myyntiMaara: string}[] = [];
-  tyo: string = '';
-  poydanNumero: string = '';
-  myyntiMaara: string = '';
-  faCoffee = faCoffee;
+  // tarjoiluOhje: {tyo: string, poydanNumero: string, myyntiMaara: string}[] = [];
+  // tarjoiluOhje: [{tyo: string, poydanNumero: string, myyntiMaara: string}];
+  tarjoiluOhje: [{tyo: 'myyty', poydanNumero: '24', myyntiMaara: '90'}];
 
   kahviaMyyty() {
-    this.tarjoiluOhje.push({
-      tyo: 'myyty',
-      poydanNumero: this.poydanNumero,
-      myyntiMaara: this.myyntiMaara
-    });
+    // this.tarjoiluOhje.push({
+    //   tyo: 'myyty',
+    //   poydanNumero: this.poydanNumero,
+    //   myyntiMaara: this.myyntiMaara
+    // });
   }
 
   kahviaTarjoiltu() {
-    this.tarjoiluOhje.push({
-      tyo: 'tarjoiltu',
-      poydanNumero: this.poydanNumero,
-      myyntiMaara: this.myyntiMaara
-    });
+    // this.tarjoiluOhje.push({
+    //   tyo: 'tarjoiltu',
+    //   poydanNumero: this.poydanNumero,
+    //   myyntiMaara: this.myyntiMaara
+    // });
   }
 }
