@@ -8,8 +8,9 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   tarjoiluOhje: {tyo: string, poydanNumero: string, myyntiMaara: string}[] = [];
-  poydanNumero = '';
-  myyntiMaara = '';
+  tyo: string = '';
+  poydanNumero: string = '';
+  myyntiMaara: string = '';
   faCoffee = faCoffee;
 
   kahviaMyyty() {
