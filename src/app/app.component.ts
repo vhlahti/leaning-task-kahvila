@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // tarjoiluOhje: {tyo: string, poydanNumero: string, myyntiMaara: string}[] = [];
-  // tarjoiluOhje: [{tyo: string, poydanNumero: string, myyntiMaara: string}];
-  tarjoiluOhje: [{tyo: 'myyty', poydanNumero: '24', myyntiMaara: '90'}];
+  tarjoiluOhje = [{tyo: 'myyty', poydanNumero: '24', myyntiMaara: '90'}];
 
   kahviaMyyty() {
     // this.tarjoiluOhje.push({
