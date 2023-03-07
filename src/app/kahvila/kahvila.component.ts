@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-kahvila',
@@ -6,22 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./kahvila.component.css']
 })
 export class KahvilaComponent {
-  poydanNumero: string = '';
-  myyntiMaara: string = '';
+  uusiPoydanNumero: string = '';
+  uusiMyyntiMaara: string = '';
+  
+  @Output() myyntiTapahtuma = new EventEmitter<{poydanNumero:string, myyntiMaara:string}>();
+  @Output() tarjoiluTapahtuma = new EventEmitter<{poydanNumero:string, myyntiMaara:string}>();
 
   kahviaMyyty() {
-    // this.tarjoiluOhje.push({
-    //   tyo: 'myyty',
-    //   poydanNumero: this.poydanNumero,
-    //   myyntiMaara: this.myyntiMaara
-    // });
+    this.myyntiTapahtuma.emit({
+      poydanNumero: this.uusiPoydanNumero,
+      myyntiMaara: this.uusiMyyntiMaara
+    })
   }
 
   kahviaTarjoiltu() {
-    // this.tarjoiluOhje.push({
-    //   tyo: 'tarjoiltu',
-    //   poydanNumero: this.poydanNumero,
-    //   myyntiMaara: this.myyntiMaara
-    // });
+    this.tarjoiluTapahtuma.emit({
+      poydanNumero: this.uusiPoydanNumero,
+      myyntiMaara: this.uusiMyyntiMaara
+    })
   }
+
 }

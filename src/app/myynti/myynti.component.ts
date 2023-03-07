@@ -9,7 +9,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class MyyntiComponent implements OnInit {
   faCoffee = faCoffee;
 
-  @Input() ohje: {tyo:string, poydanNumero:string, myyntiMaara:string};
+  @Input('tarjoilijalle') ohje: {tyo:string, poydanNumero:string, myyntiMaara:string};
 
   constructor() {}
 
